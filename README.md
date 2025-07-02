@@ -1,4 +1,4 @@
-<h1 align="center">✨ Fullstack Chat & Video Calling App ✨</h1>
+<h1 align="center">✨ A real-time chat and video calling platform designed to help users connect and learn new languages through immersive conversation with native speakers and fellow learners.✨</h1>
 
 Highlights:
 
@@ -11,4 +11,3 @@ Highlights:
 - 🚨 Error Handling (Frontend & Backend)
 - 🎯 Built with Scalable Technologies like Stream
 - ⏳ And much more!
-
