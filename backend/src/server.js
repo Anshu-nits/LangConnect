@@ -10,19 +10,20 @@ import chatRoutes from "./routes/chat.route.js";
 
 import { connectDB } from "./lib/db.js";
 
+console.log("🧠 LangConnect backend booting up...");
+
 const app = express();
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT; // ⚠️ Must NOT have fallback for Render
 
 const __dirname = path.resolve();
 
-// Health Check Route (for Render cold-start debugging)
 app.get("/backend-health", (req, res) => {
   res.send("✅ LangConnect backend is alive and responding!");
 });
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173", // use env for prod
+    origin: process.env.CLIENT_URL, 
     credentials: true,
   })
 );
@@ -44,5 +45,5 @@ if (process.env.NODE_ENV === "production") {
 
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on port ${PORT}`);
-  connectDB(); // Connect MongoDB only after server starts
+  connectDB();
 });
