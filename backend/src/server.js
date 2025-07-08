@@ -15,10 +15,15 @@ const PORT = process.env.PORT || 5001;
 
 const __dirname = path.resolve();
 
+// Health Check Route (for Render cold-start debugging)
+app.get("/backend-health", (req, res) => {
+  res.send("✅ LangConnect backend is alive and responding!");
+});
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
-    credentials: true, // allow frontend to send cookies
+    origin: process.env.CLIENT_URL || "http://localhost:5173", // use env for prod
+    credentials: true,
   })
 );
 
@@ -38,6 +43,6 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-  connectDB();
+  console.log(`🚀 Server is running on port ${PORT}`);
+  connectDB(); // Connect MongoDB only after server starts
 });
