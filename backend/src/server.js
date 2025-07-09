@@ -9,6 +9,8 @@ import chatRoutes from "./routes/chat.route.js";
 
 import { connectDB } from "./lib/db.js";
 
+console.log("🧠 LangConnect backend booting up...");
+
 const app = express();
 const PORT = process.env.PORT;
 
@@ -27,6 +29,6 @@ app.use("/api/users", userRoutes);
 app.use("/api/chat", chatRoutes);
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`🚀 Server is running on port ${PORT}`);
   connectDB();
 });
