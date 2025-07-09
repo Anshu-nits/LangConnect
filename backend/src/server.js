@@ -12,7 +12,7 @@ import { connectDB } from "./lib/db.js";
 console.log("🧠 LangConnect backend booting up...");
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5001;
 
 app.use(
   cors({
