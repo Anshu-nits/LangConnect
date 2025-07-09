@@ -20,7 +20,7 @@ const SignUpPage = () => {
   // } = useMutation({
   //   mutationFn: signup,
   //   onSuccess: () => queryClient.invalidateQueries({ queryKey: ["authUser"] }),
-  // });
+  // });   
 
   // This is how we did it using our custom hook - optimized version
   const { isPending, error, signupMutation } = useSignUp();
