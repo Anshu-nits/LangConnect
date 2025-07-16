@@ -1,4 +1,4 @@
-<h1 align="center">✨ A real-time chat and video calling platform designed to help users connect and learn new languages through immersive conversation with native speakers and fellow learners.✨</h1>
+<h1 align="center">✨ A real-time chat and video calling platform developed to help users connect and learn new languages through immersive conversation with native speakers and fellow learners.✨</h1>
 
 Highlights:
 
